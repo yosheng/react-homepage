@@ -1,0 +1,127 @@
+@import '~bootstrap/scss/bootstrap.scss';
+/********基本***************/
+.item {
+  text-align: center;
+  font: 50px "Microsoft Yahei";
+  color: #fff;
+}
+
+.item-1 {
+  @extend .item;
+}
+
+.item-2 {
+  @extend .item;
+}
+.item-4 {
+  @extend .item;
+  .fp-tableCell {
+    vertical-align: top;
+    padding-top: 100px;
+  }
+}
+.item-6 {
+  @extend .item;
+}
+
+.page-content {
+  display: none; /* 默认隐藏 */
+}
+
+.page-content.visible {
+  display: block; /* 显示 */
+}
+
+.page-content.hidden {
+  display: none; /* 隐藏 */
+}
+
+/********基本END***************/
+
+/*********************设置背景************************************/
+
+.item-1 {
+  background: url("~@/assets/images/board-wallpapers.jpg") no-repeat center
+  center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.item-2 {
+  background: url("~@/assets/images/Chalk-board-wallpaper-hd.jpg") no-repeat
+  center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.item-4 {
+  background: url("~@/assets/images/bg2.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.item-5 {
+  background: url("~@/assets/images/bg1.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.item-6 {
+  background: url("~@/assets/images/pure.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  // width: 100%;
+  // height: 100%;
+  // position: fixed;
+  // display: none;
+}
+
+/**********************设置背景End*****************************************/
+body {
+  font-family: microsoft yahei, sans-serif;
+  tap-heilight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: #ffffff;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+
+/********************右側導航欄*************************************/
+
+#fp-nav {
+  top: 80%;
+}
+
+#fp-nav ul li {
+  vertical-align: middle;
+  margin: 10px 50px 0;
+}
+
+#fp-nav li .active {
+  background-position: 0 bottom;
+}
+
+#fp-nav ul li a {
+  display: block;
+  color: #8f9da4;
+  width: 21px;
+  height: 21px;
+  background: url(~@/assets/images/dot.png) 5px 5px no-repeat;
+  /*right: 0;*/
+}
+
+#fp-nav span {
+  display: none;
+}
+
+/****************************右側導航欄End******************************/
