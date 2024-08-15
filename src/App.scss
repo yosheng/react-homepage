@@ -98,30 +98,28 @@ a {
 
 /********************右側導航欄*************************************/
 
-#fp-nav {
+#nav-dot {
   top: 80%;
+  position: fixed;
+  margin-top: -48px;
+  right: 17px;
 }
 
-#fp-nav ul li {
+#nav-dot ul li {
   vertical-align: middle;
   margin: 10px 50px 0;
 }
 
-#fp-nav li .active {
+#nav-dot li .active {
   background-position: 0 bottom;
 }
 
-#fp-nav ul li a {
+#nav-dot ul li a {
   display: block;
   color: #8f9da4;
   width: 21px;
   height: 21px;
   background: url(~@/assets/images/dot.png) 5px 5px no-repeat;
-  /*right: 0;*/
-}
-
-#fp-nav span {
-  display: none;
 }
 
 /****************************右側導航欄End******************************/
