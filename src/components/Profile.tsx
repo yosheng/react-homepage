@@ -7,7 +7,7 @@ import capImg from '@/assets/images/page-2/cap.png';
 import scrollImg from '@/assets/images/page-2/scroll.png';
 import mailImg from '@/assets/images/page-2/mail.png';
 
-const BasicInfo: React.FC = () => {
+const Profile: React.FC = () => {
     return (
         <Container fluid>
             <Row className="text-center">
@@ -57,4 +57,4 @@ const BasicInfo: React.FC = () => {
     );
 };
 
-export default BasicInfo;
+export default Profile;
