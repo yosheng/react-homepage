@@ -41,7 +41,7 @@ const App = () => {
         onLeave: (origin, destination, direction) => {
             setActivePage(destination.anchor as string);
         },
-        scrollOverflow: true,
+        scrollOverflow: false,
         loopHorizontal: false,
         scrollBar: false,
         menu: '#menu',

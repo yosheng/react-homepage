@@ -44,9 +44,9 @@ const Home: React.FC = () => {
                     <FontAwesomeIcon icon={faSlideshare} fixedWidth />
                 </a>
             </Col>
-            <a href="#" className="next-page">
+            <button className="next-page">
                 <FontAwesomeIcon icon={faChevronDown} fixedWidth />
-            </a>
+            </button>
         </Row>
     );
 };
