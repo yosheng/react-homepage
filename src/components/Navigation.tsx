@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Navbar, Nav, Container} from 'react-bootstrap';
+import {Navbar, Nav, Container, Form} from 'react-bootstrap';
+import i18n from '@/i18n';
+import {useTranslation} from 'react-i18next';
 import './Navigation.scss'
 
 interface INavigationProps {
@@ -8,6 +10,8 @@ interface INavigationProps {
 
 const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => {
     const [background, setBackground] = useState('black');
+
+    const {t} = useTranslation();
 
     useEffect(() => {
         switch (activePage) {
@@ -35,6 +39,11 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
         }
     }, [activePage]);
 
+    const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        i18n.changeLanguage(event.target.value)
+        console.log(event.target.value)
+    };
+
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className={`resume ${background}`}>
             <Container>
@@ -42,23 +51,31 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
                     Yosheng Zhang
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                <Navbar.Collapse id="responsive-navbar-nav" className="navbar-toggle">
+                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                     <Nav id="menu">
                         <Nav.Link href="#profile" data-menuanchor="profile" className="active">
-                            基本資料
+                            {t('profile')}
                         </Nav.Link>
                         <Nav.Link href="#achievement" data-menuanchor="achievement">
-                            個人成就
+                            {t('achievement')}
                         </Nav.Link>
                         <Nav.Link href="#experience" data-menuanchor="experience">
-                            工作經歷
+                            {t('experience')}
                         </Nav.Link>
                         <Nav.Link href="#interest" data-menuanchor="interest">
-                            業餘興趣
+                            {t('interest')}
                         </Nav.Link>
                         <Nav.Link href="#future" data-menuanchor="future">
-                            展望未來
+                            {t('future')}
                         </Nav.Link>
+                        <Form className="d-flex">
+                            <Form.Select className="language-selector" aria-label="语言选择"
+                                         onChange={handleLanguageChange} defaultValue={i18n.language}>
+                                <option value="en">English</option>
+                                <option value="zh-CN">简体</option>
+                                <option value="zh-TW">繁體</option>
+                            </Form.Select>
+                        </Form>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -10,8 +10,11 @@ import Future from "@/components/Future";
 import Navigation from "@/components/Navigation";
 import OverlayTrigger from 'react-bootstrap/esm/OverlayTrigger';
 import {Tooltip} from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
+    const {t} = useTranslation();
+
     const [activePage, setActivePage] = useState('home');
     const [fullpageApi, setFullpageApi] = useState<fullpageApi>(); // 添加一个状态来保存 fullpageApi 实例
 
@@ -50,12 +53,12 @@ const App = () => {
     };
 
     const fullpageNavList = [
-        {page: 'home', title: '个人简历'},
-        {page: 'profile', title: '基本资料'},
-        {page: 'achievement', title: '个人成就'},
-        {page: 'experience', title: '工作经历'},
-        {page: 'interest', title: '实务经验'},
-        {page: 'future', title: '展望未来'}
+        {page: 'home', title: t('home')},
+        {page: 'profile', title: t('profile')},
+        {page: 'achievement', title: t('achievement')},
+        {page: 'experience', title: t('experience')},
+        {page: 'interest', title: t('interest')},
+        {page: 'future', title: t('future')}
     ];
 
     return (
