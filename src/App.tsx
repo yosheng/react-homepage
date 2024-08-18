@@ -60,7 +60,7 @@ const App = () => {
 
     return (
         <div id="app">
-            <Navigation/>
+            <Navigation activePage={activePage}/>
             <ReactFullpage
                 {...options}
                 render={({state, fullpageApi}) => {
@@ -111,7 +111,7 @@ const App = () => {
             >
                 <ul>
                     {fullpageNavList.map((item, index) => (
-                        <li key={index} style={{ listStyleType: 'none' }}>
+                        <li key={index} style={{listStyleType: 'none'}}>
                             <OverlayTrigger
                                 placement="left"
                                 overlay={<Tooltip>{item.title}</Tooltip>}

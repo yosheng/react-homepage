@@ -9,16 +9,16 @@
 }
 
 .navbar {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0) !important;
   transition: 1s all ease;
 }
 
 .navbar.blue {
-  background: rgba(71, 166, 173, 1);
+  background: rgba(71, 166, 173, 1) !important;
 }
 
 .navbar.black {
-  background: rgba(51, 51, 51, 0.7);
+  background: rgba(51, 51, 51, 0.7) !important;
 }
 
 .resume .navbar-brand,
@@ -48,16 +48,8 @@
   text-decoration: none;
 }
 
-.navbar-default .navbar-toggle {
-  background-color: #122b40;
-}
-
-.navbar-default .navbar-toggle:focus {
-  background-color: #122b40;
-}
-
-.navbar-default .navbar-toggle:hover {
-  background-color: #122b40;
+.navbar-collapse{
+  justify-content: flex-end;
 }
 
 /********************導航條End***************************************/
