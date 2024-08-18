@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.scss';
 import ReactFullpage, {fullpageOptions, fullpageApi} from '@fullpage/react-fullpage';
 import Home from "./components/Home";
@@ -12,11 +12,45 @@ import OverlayTrigger from 'react-bootstrap/esm/OverlayTrigger';
 import {Tooltip} from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 
+declare global {
+    interface Window {
+        fullpage_api:any;
+    }
+}
+
 const App = () => {
     const {t} = useTranslation();
 
     const [activePage, setActivePage] = useState('home');
-    const [fullpageApi, setFullpageApi] = useState<fullpageApi>(); // 添加一个状态来保存 fullpageApi 实例
+
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (!window.fullpage_api) return;
+
+            switch (event.key) {
+                case 'ArrowUp':
+                    window.fullpage_api.moveSectionUp();
+                    break;
+                case 'ArrowDown':
+                    window.fullpage_api.moveSectionDown();
+                    break;
+                case 'ArrowLeft':
+                    window.fullpage_api.moveSlideLeft();
+                    break;
+                case 'ArrowRight':
+                    window.fullpage_api.moveSlideRight();
+                    break;
+                default:
+                    break;
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [window.fullpage_api]);
 
     const options: fullpageOptions = {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -67,9 +101,9 @@ const App = () => {
             <ReactFullpage
                 {...options}
                 render={({state, fullpageApi}) => {
-                    if (!fullpageApi && !state) {
-                        // 确保在初次渲染时保存 fullpageApi
-                        setFullpageApi(fullpageApi);
+                    if (!fullpageApi) {
+                        // ref: https://github.com/alvarotrigo/react-fullpage/issues/404
+                        window.fullpage_api = fullpageApi;
                     }
 
                     return (
@@ -122,7 +156,6 @@ const App = () => {
                                 <a
                                     href={`#${item.page}`}
                                     className={item.page === activePage ? 'active' : ''}
-                                    onClick={() => fullpageApi && fullpageApi.moveTo(item.page)}
                                 >
                                 </a>
                             </OverlayTrigger>
