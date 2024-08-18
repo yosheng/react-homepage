@@ -38,7 +38,7 @@ const swiperOption = {
 
 const Achievement = () => {
     return (
-        <Container fluid>
+        <Container>
             <Row>
                 <Col md={6} xs={12}>
                     <div className="skill-introduce">

@@ -9,7 +9,7 @@ import mailImg from '@/assets/images/page-2/mail.png';
 
 const Profile: React.FC = () => {
     return (
-        <Container fluid>
+        <Container>
             <Row className="text-center">
                 <Col xs={12}>
                     <h2 className="d-none d-md-block title">基本資料</h2>

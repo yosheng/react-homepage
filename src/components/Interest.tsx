@@ -43,7 +43,7 @@ const Interest = () => {
         <div>
             {/* 第一屏 */}
             <div className="slide">
-                <Container fluid>
+                <Container>
                     <Row>
                         <Col xs={6} md={3}>
                             <div className="portfolio-item">
@@ -159,7 +159,7 @@ const Interest = () => {
 
             {/* 第二屏 */}
             <div className="slide">
-                <Container fluid>
+                <Container>
                     <Row>
                         <Swiper {...swiperOption} className="portfolio-container">
                             {swiperSlides.map((slide, index) => (

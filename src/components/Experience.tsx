@@ -10,7 +10,7 @@ import sweetomeImg from '@/assets/images/page-4/04-sweetome.jpg';
 
 const Experience = () => {
     return (
-        <Container fluid>
+        <Container>
             <Row className="d-none d-md-block">
                 <Col xs={12}>
                     <span className="title" style={{ display: 'inline-block' }}>工作經歷</span>
