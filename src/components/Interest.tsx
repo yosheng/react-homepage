@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import './Interest.scss';
 
 // 引入图片
 import blogImg from '@/assets/images/page-5/01-blog.jpg';
@@ -40,7 +41,7 @@ const Interest = () => {
     ];
 
     return (
-        <div>
+        <>
             {/* 第一屏 */}
             <div className="slide">
                 <Container>
@@ -173,7 +174,7 @@ const Interest = () => {
                     </Row>
                 </Container>
             </div>
-        </div>
+        </>
     );
 };
 
