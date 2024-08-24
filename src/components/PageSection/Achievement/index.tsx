@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import './Achievement.scss'
+import './style.scss'
 
 // 引入图片
 import codingImg from '@/assets/images/page-3/coding.png';

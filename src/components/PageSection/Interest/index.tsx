@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import './Interest.scss';
+import './style.scss';
 
 // 引入图片
 import blogImg from '@/assets/images/page-5/01-blog.jpg';

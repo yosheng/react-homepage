@@ -1,20 +1,21 @@
 import React, {useEffect, useState} from 'react';
 import './App.scss';
 import ReactFullpage, {fullpageOptions, fullpageApi} from '@fullpage/react-fullpage';
-import Home from "./components/Home";
-import Profile from "@/components/Profile";
-import Achievement from "@/components/Achievement";
-import Experience from "@/components/Experience";
-import Interest from "@/components/Interest";
-import Future from "@/components/Future";
+import Home from "@/components/PageSection/Home";
+import Profile from "@/components/PageSection/Profile";
+import Achievement from "@/components/PageSection/Achievement";
+import Experience from "@/components/PageSection/Experience";
+import Interest from "@/components/PageSection/Interest";
+import Future from "@/components/PageSection/Future";
 import Navigation from "@/components/Navigation";
 import OverlayTrigger from 'react-bootstrap/esm/OverlayTrigger';
 import {Tooltip} from "react-bootstrap";
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
+import PageSection from './components/PageSection';
 
 declare global {
     interface Window {
-        fullpage_api:any;
+        fullpage_api: any;
     }
 }
 
@@ -108,36 +109,24 @@ const App = () => {
 
                     return (
                         <>
-                            <div className="section item-1">
-                                <div className={`page-content ${activePage === 'home' ? 'visible' : 'hidden'}`}>
-                                    <Home/>
-                                </div>
-                            </div>
-                            <div className="section item-2">
-                                <div className={`page-content ${activePage === 'profile' ? 'visible' : 'hidden'}`}>
-                                    <Profile/>
-                                </div>
-                            </div>
-                            <div className="section item-3">
-                                <div className={`page-content ${activePage === 'achievement' ? 'visible' : 'hidden'}`}>
-                                    <Achievement/>
-                                </div>
-                            </div>
-                            <div className="section item-4">
-                                <div className={`page-content ${activePage === 'experience' ? 'visible' : 'hidden'}`}>
-                                    <Experience/>
-                                </div>
-                            </div>
-                            <div className="section item-5">
-                                <div className={`page-content ${activePage === 'interest' ? 'visible' : 'hidden'}`}>
-                                    <Interest/>
-                                </div>
-                            </div>
-                            <div className="section item-6">
-                                <div className={`page-content ${activePage === 'future' ? 'visible' : 'hidden'}`}>
-                                    <Future/>
-                                </div>
-                            </div>
+                            <PageSection activePage={activePage} sectionClass="item-1" pageKey="home">
+                                <Home/>
+                            </PageSection>
+                            <PageSection activePage={activePage} sectionClass="item-2" pageKey="profile">
+                                <Profile/>
+                            </PageSection>
+                            <PageSection activePage={activePage} sectionClass="item-3" pageKey="achievement">
+                                <Achievement/>
+                            </PageSection>
+                            <PageSection activePage={activePage} sectionClass="item-4" pageKey="experience">
+                                <Experience/>
+                            </PageSection>
+                            <PageSection activePage={activePage} sectionClass="item-5" pageKey="interest">
+                                <Interest/>
+                            </PageSection>
+                            <PageSection activePage={activePage} sectionClass="item-6" pageKey="future">
+                                <Future/>
+                            </PageSection>
                         </>
                     );
                 }}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './Experience.scss'
+import './style.scss'
 
 // 引入图片
 import shuImg from '@/assets/images/page-4/01-shu.jpg';

@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedin, faGithub, faSlideshare } from '@fortawesome/free-brands-svg-icons';
 import { faBook, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import './Home.scss';
+import './style.scss';
 
 const Home: React.FC = () => {
     return (

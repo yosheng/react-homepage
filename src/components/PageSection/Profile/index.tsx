@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './Profile.scss'
+import './style.scss'
 
 import laptopImg from '@/assets/images/page-2/laptop.png';
 import capImg from '@/assets/images/page-2/cap.png';
