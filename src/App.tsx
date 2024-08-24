@@ -3,9 +3,9 @@ import './App.scss';
 import ReactFullpage, {fullpageOptions, fullpageApi} from '@fullpage/react-fullpage';
 import Home from "@/components/PageSection/Home";
 import Profile from "@/components/PageSection/Profile";
-import Achievement from "@/components/PageSection/Achievement";
+import Introduction from "components/PageSection/Introduction";
 import Experience from "@/components/PageSection/Experience";
-import Interest from "@/components/PageSection/Interest";
+import Portfolio from "components/PageSection/Portfolio";
 import Future from "@/components/PageSection/Future";
 import Navigation from "@/components/Navigation";
 import OverlayTrigger from 'react-bootstrap/esm/OverlayTrigger';
@@ -116,13 +116,13 @@ const App = () => {
                                 <Profile/>
                             </PageSection>
                             <PageSection activePage={activePage} sectionClass="item-3" pageKey="achievement">
-                                <Achievement/>
+                                <Introduction/>
                             </PageSection>
                             <PageSection activePage={activePage} sectionClass="item-4" pageKey="experience">
                                 <Experience/>
                             </PageSection>
                             <PageSection activePage={activePage} sectionClass="item-5" pageKey="interest">
-                                <Interest/>
+                                <Portfolio/>
                             </PageSection>
                             <PageSection activePage={activePage} sectionClass="item-6" pageKey="future">
                                 <Future/>

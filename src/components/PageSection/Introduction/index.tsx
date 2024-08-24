@@ -36,7 +36,7 @@ const swiperOption = {
     },
 };
 
-const Achievement = () => {
+const Introduction = () => {
     return (
         <Container>
             <Row>
@@ -121,4 +121,4 @@ const Achievement = () => {
     );
 };
 
-export default Achievement;
+export default Introduction;

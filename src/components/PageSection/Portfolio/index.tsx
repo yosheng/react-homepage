@@ -16,7 +16,7 @@ import fightConnectionImg from '@/assets/images/page-5/08-fight connection.jpg';
 import buildNasImg from '@/assets/images/page-5/01-build nas.jpg';
 import grub4dosImg from '@/assets/images/page-5/02-grub4dos.jpg';
 
-const Interest = () => {
+const Portfolio = () => {
     const swiperOption = {
         centeredSlides: true,
         autoplay: {
@@ -178,4 +178,4 @@ const Interest = () => {
     );
 };
 
-export default Interest;
+export default Portfolio;
