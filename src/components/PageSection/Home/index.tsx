@@ -1,13 +1,13 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import {Row, Col, Container} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faLinkedin, faGithub, faSlideshare } from '@fortawesome/free-brands-svg-icons';
+import {faFacebook, faLinkedin, faGithub, faSlideshare, faWordpress} from '@fortawesome/free-brands-svg-icons';
 import { faBook, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './style.scss';
 
 const Home: React.FC = () => {
     return (
-        <Row className="word">
+        <Container className="word">
             <Row className="userPic">
                 <div
                     className="sec1_userPic"
@@ -27,9 +27,10 @@ const Home: React.FC = () => {
             >
                 Yosheng
             </Col>
+            <Col xs={12} style={{ fontSize: '0.3em' }}>1993年 牡羊男</Col>
             <Col xs={12} className="social-links">
-                <a href="https://www.facebook.com/yosheng0323">
-                    <FontAwesomeIcon icon={faFacebook} fixedWidth />
+                <a href="https://blog.yosheng.tw">
+                    <FontAwesomeIcon icon={faWordpress} fixedWidth />
                 </a>
                 <a href="https://www.linkedin.com/in/yosheng-zhang-020962102">
                     <FontAwesomeIcon icon={faLinkedin} fixedWidth />
@@ -37,8 +38,8 @@ const Home: React.FC = () => {
                 <a href="https://github.com/yosheng">
                     <FontAwesomeIcon icon={faGithub} fixedWidth />
                 </a>
-                <a href="https://legacy.gitbook.com/@yosheng">
-                    <FontAwesomeIcon icon={faBook} fixedWidth />
+                <a href="https://www.facebook.com/yosheng0323">
+                    <FontAwesomeIcon icon={faFacebook} fixedWidth />
                 </a>
                 <a href="https://www.slideshare.net/ssuserf01a96">
                     <FontAwesomeIcon icon={faSlideshare} fixedWidth />
@@ -47,7 +48,7 @@ const Home: React.FC = () => {
             <button className="next-page">
                 <FontAwesomeIcon icon={faChevronDown} fixedWidth />
             </button>
-        </Row>
+        </Container>
     );
 };
 

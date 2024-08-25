@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Container, Row, Col} from 'react-bootstrap';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import './style.scss'
 
@@ -13,14 +13,18 @@ import RHCEImg from '@/assets/images/page-3/RHCE.jpg';
 import OCJP6Img from '@/assets/images/page-3/OCJP6.jpg';
 import Certificate1Img from '@/assets/images/page-3/Certificate_1.jpg';
 import Certificate2Img from '@/assets/images/page-3/Certificate_2.jpg';
+import capImg from "@/assets/images/page-2/cap.png";
+import {faFacebook} from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSchool} from "@fortawesome/free-solid-svg-icons";
 
 // swiperSlides 数据
 const swiperSlides = [
-    { title: 'RHCSA', img: RHCSAImg },
-    { title: 'RHCE', img: RHCEImg },
-    { title: 'OCJP 6', img: OCJP6Img },
-    { title: 'HTML5', img: Certificate1Img },
-    { title: 'HTML5', img: Certificate2Img },
+    {title: 'RHCSA', img: RHCSAImg},
+    {title: 'RHCE', img: RHCEImg},
+    {title: 'OCJP 6', img: OCJP6Img},
+    {title: 'HTML5', img: Certificate1Img},
+    {title: 'HTML5', img: Certificate2Img},
 ];
 
 const swiperOption = {
@@ -45,18 +49,18 @@ const Introduction = () => {
                         <div className="media">
                             <div className="media-left media-top">
                                 <a href="#">
-                                    <img className="media-object" src={codingImg} alt="Coding" />
+                                    <img className="media-object" src={codingImg} alt="Coding"/>
                                 </a>
                             </div>
                             <div className="media-body">
                                 <h4 className="media-heading">程式設計</h4>
                                 <p>
                                     廣泛學習各種程式語言，從基礎 C 語言到物件導向的 C# 或 Java
-                                    <br />
+                                    <br/>
                                     具有使用 PHP 或者是 ASP.NET 搭配資料庫開發基本系統能力
-                                    <br />
+                                    <br/>
                                     喜好學習各種工具來快速完成目的，具有學習熱誠
-                                    <br />
+                                    <br/>
                                     對於前端的 HTML5、CSS3、JavaScript 皆有著墨
                                 </p>
                             </div>
@@ -64,15 +68,15 @@ const Introduction = () => {
                         <div className="media">
                             <div className="media-left media-top">
                                 <a href="#">
-                                    <img className="media-object" src={repairImg} alt="System Maintenance" />
+                                    <img className="media-object" src={repairImg} alt="System Maintenance"/>
                                 </a>
                             </div>
                             <div className="media-body">
                                 <h4 className="media-heading">系統維護</h4>
                                 <p>
-                                    學習透過Gurb4dos整合維修工具組 <br />
-                                    隨著UEFI興起學習使用 rEFInd 整合工具 <br />
-                                    架設Nas開源相關系統如 Nas4Free、FreeNas、Openmediavault <br />
+                                    學習透過Gurb4dos整合維修工具組 <br/>
+                                    隨著UEFI興起學習使用 rEFInd 整合工具 <br/>
+                                    架設Nas開源相關系統如 Nas4Free、FreeNas、Openmediavault <br/>
                                     考取 Linux 系統維護相關證照並學習使用 Docker
                                 </p>
                             </div>
@@ -80,13 +84,13 @@ const Introduction = () => {
                         <div className="media">
                             <div className="media-left media-top">
                                 <a href="#">
-                                    <img className="media-object" src={profileImg} alt="Others" />
+                                    <img className="media-object" src={profileImg} alt="Others"/>
                                 </a>
                             </div>
                             <div className="media-body">
                                 <h4 className="media-heading">其他</h4>
                                 <p>
-                                    善於溝通解決衝突，學習塔羅占卜協助周遭朋友解惑 <br />
+                                    善於溝通解決衝突，學習塔羅占卜協助周遭朋友解惑 <br/>
                                     透過 markdown 語法紀錄占卜筆記並使用 gitbook 發布
                                 </p>
                             </div>
@@ -94,14 +98,21 @@ const Introduction = () => {
                     </div>
                 </Col>
                 <Col md={6} className="d-none d-sm-block">
+                    <div style={{textAlign: 'center'}}>
+                        <a href="https://who.shu.edu.tw/yosheng0323">
+                            <FontAwesomeIcon style={{height: 60, width: 60, color: "#0d6efd"}} icon={faSchool} fixedWidth/>
+                        </a>
+                        <div>世新大學 資管系 網科組</div>
+                        <div>同濟大學 計算機科學 交換生</div>
+                    </div>
                     <Swiper {...swiperOption} className="license-container">
                         {swiperSlides.map((slide, index) => (
                             <SwiperSlide key={index} className="license-slide">
                                 <span className="tip">{slide.title}</span>
-                                <img src={slide.img} alt={slide.title} />
+                                <img src={slide.img} alt={slide.title}/>
                             </SwiperSlide>
                         ))}
-                        <div className="swiper-pagination" />
+                        <div className="swiper-pagination"/>
                     </Swiper>
                 </Col>
                 <Col md={12} className="d-none d-sm-block skills">
