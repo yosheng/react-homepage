@@ -1,8 +1,8 @@
 {
-  "home": "resume",
-  "profile": "basic info",
-  "achievement": "introduction",
-  "experience": "experience",
-  "interest": "interest",
-  "future": "future"
+  "navigation.home": "Home",
+  "navigation.profile": "Profile",
+  "navigation.introduction": "Introduction",
+  "navigation.experience": "Experience",
+  "navigation.portfolio": "Portfolio",
+  "navigation.future": "Future"
 }

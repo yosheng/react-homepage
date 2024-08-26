@@ -89,12 +89,12 @@ const App = () => {
     };
 
     const fullpageNavList = [
-        {page: PageConstants.Home, title: t('home')},
-        {page: PageConstants.Profile, title: t('profile')},
-        {page: PageConstants.Introduction, title: t('achievement')},
-        {page: PageConstants.Experience, title: t('experience')},
-        {page: PageConstants.Portfolio, title: t('interest')},
-        {page: PageConstants.Future, title: t('future')},
+        {page: PageConstants.Home, title: t('navigation.home')},
+        {page: PageConstants.Profile, title: t('navigation.profile')},
+        {page: PageConstants.Introduction, title: t('navigation.introduction')},
+        {page: PageConstants.Experience, title: t('navigation.experience')},
+        {page: PageConstants.Portfolio, title: t('navigation.portfolio')},
+        {page: PageConstants.Future, title: t('navigation.future')},
     ];
 
     return (

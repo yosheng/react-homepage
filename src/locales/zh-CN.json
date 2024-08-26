@@ -1,8 +1,8 @@
 {
-  "home": "主页",
-  "profile": "基本资料",
-  "achievement": "个人成就",
-  "experience": "工作经历",
-  "interest": "实务经验",
-  "future": "展望未来"
+  "navigation.home": "主页",
+  "navigation.profile": "基本资料",
+  "navigation.introduction": "简介",
+  "navigation.experience": "经历",
+  "navigation.portfolio": "作品集",
+  "navigation.future": "展望未来"
 }

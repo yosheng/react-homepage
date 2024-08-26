@@ -55,19 +55,19 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                     <Nav id="menu">
                         <Nav.Link href={`#${PageConstants.Profile}`} data-menuanchor={PageConstants.Profile} className="active">
-                            {t('profile')}
+                            {t('navigation.profile')}
                         </Nav.Link>
                         <Nav.Link href={`#${PageConstants.Introduction}`} data-menuanchor={PageConstants.Introduction}>
-                            {t('achievement')}
+                            {t('navigation.introduction')}
                         </Nav.Link>
                         <Nav.Link href={`#${PageConstants.Experience}`} data-menuanchor={PageConstants.Experience}>
-                            {t('experience')}
+                            {t('navigation.experience')}
                         </Nav.Link>
                         <Nav.Link href={`#${PageConstants.Portfolio}`} data-menuanchor={PageConstants.Portfolio}>
-                            {t('interest')}
+                            {t('navigation.portfolio')}
                         </Nav.Link>
                         <Nav.Link href={`#${PageConstants.Future}`} data-menuanchor={PageConstants.Future}>
-                            {t('future')}
+                            {t('navigation.future')}
                         </Nav.Link>
                         <Form className="d-flex">
                             <Form.Select className="language-selector" aria-label="语言选择"
