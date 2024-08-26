@@ -1,8 +1,8 @@
 import React from 'react';
-import {Row, Col, Container} from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faFacebook, faLinkedin, faGithub, faSlideshare, faWordpress} from '@fortawesome/free-brands-svg-icons';
-import { faBook, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {Col, Container, Row} from 'react-bootstrap';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faFacebook, faGithub, faLinkedin, faSlideshare, faWordpress} from '@fortawesome/free-brands-svg-icons';
+import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import './style.scss';
 
 const Home: React.FC = () => {

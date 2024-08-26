@@ -4,6 +4,7 @@
 }
 
 .license-slide {
+  margin-bottom: 30px;
   text-align: center;
   font-size: 38px;
   font-weight: 700;
@@ -25,10 +26,9 @@
   span {
     position: absolute;
     width: 100%;
-    bottom: 5px;
+    bottom: 0px;
     background-color: #000;
     color: #ffffff;
-    height: 50px;
     font-size: 20px;
   }
 }
@@ -42,6 +42,7 @@
   animation: sm-img 1s ease forwards;
   -webkit-animation-delay: 0.5s;
 }
+
 .sm-img img {
   width: 100%;
   display: block;
@@ -57,51 +58,61 @@
   color: #000000;
   transform: scale(0.5);
 }
+
 .subject-1 {
   font-size: 48px;
   margin-left: -400px;
   margin-top: -50px;
 }
+
 .subject-2 {
   font-size: 18px;
   margin-left: -250px;
   margin-top: 40px;
 }
+
 .subject-3 {
   font-size: 14px;
   margin-left: -270px;
   margin-top: 10px;
 }
+
 .subject-4 {
   font-size: 20px;
   margin-left: -200px;
   margin-top: -30px;
 }
+
 .subject-5 {
   font-size: 20px;
   margin-left: -120px;
   margin-top: 50px;
 }
+
 .subject-6 {
   font-size: 30px;
   margin-left: 81px;
   margin-top: -35px;
 }
+
 .subject-7 {
   font-size: 16px;
   margin-left: 0px;
   margin-top: -40px;
 }
+
 .subject-8 {
   font-size: 20px;
   margin-left: 10px;
   margin-top: 10px;
 }
+
 .subject-9 {
   font-size: 18px;
   margin-left: 2px;
   margin-top: 41px;
 }
+
 .subject-10 {
   font-size: 18px;
   margin-left: -150px;
@@ -120,34 +131,49 @@
   // left: 10%;
   color: #000000;
 }
+
 .skill-introduce a {
   display: block;
   width: 40px;
   height: 40px;
 }
+
+.skill-introduce .media-title {
+  display: flex;
+  align-items: center;
+  div {
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
+}
+
 .skill-introduce a img {
-  display: block;
   width: 100%;
 }
-.skill-introduce .media-body p {
+
+.skill-introduce .media-body{
   font-size: 14px;
   color: #000;
   font-family: microsoft yahei, sans-serif;
 }
+
 .skill-introduce .media {
   margin-bottom: 20px;
 }
+
 .skill-introduce .media:nth-child(1) {
   opacity: 1;
   animation: bounceInLeft 2s linear forwards;
   -webkit-animation: bounceInLeft 2s linear forwards;
 }
+
 .skill-introduce .media:nth-child(2) {
   opacity: 1;
   animation: bounceInRight 2s linear forwards;
   -webkit-animation: bounceInRight 2s linear forwards;
   -webkit-animation-delay: 1s;
 }
+
 .skill-introduce .media:nth-child(3) {
   opacity: 1;
   animation: bounceInLeft 2s linear forwards;
