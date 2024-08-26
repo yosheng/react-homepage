@@ -2,9 +2,9 @@ import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import en from './locales/en-US.json';
-import zhCN from './locales/zh-CN.json';
-import zhTW from './locales/zh-TW.json';
+import en from '../locales/en-US.json';
+import zhCN from '../locales/zh-CN.json';
+import zhTW from '../locales/zh-TW.json';
 
 i18n
     .use(LanguageDetector)

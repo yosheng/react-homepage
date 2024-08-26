@@ -12,6 +12,7 @@ import OverlayTrigger from 'react-bootstrap/esm/OverlayTrigger';
 import {Tooltip} from "react-bootstrap";
 import {useTranslation} from 'react-i18next';
 import PageSection from './components/PageSection';
+import {PageConstants} from "@/utils/constants";
 
 declare global {
     interface Window {
@@ -66,12 +67,12 @@ const App = () => {
         scrollingSpeed: 700,
         navigation: false,
         anchors: [
-            'home',
-            'profile',
-            'achievement',
-            'experience',
-            'interest',
-            'future'
+            PageConstants.Home,
+            PageConstants.Profile,
+            PageConstants.Introduction,
+            PageConstants.Experience,
+            PageConstants.Portfolio,
+            PageConstants.Future,
         ],
         afterLoad: (origin, destination, direction) => {
             setActivePage(destination.anchor as string);
@@ -88,12 +89,12 @@ const App = () => {
     };
 
     const fullpageNavList = [
-        {page: 'home', title: t('home')},
-        {page: 'profile', title: t('profile')},
-        {page: 'achievement', title: t('achievement')},
-        {page: 'experience', title: t('experience')},
-        {page: 'interest', title: t('interest')},
-        {page: 'future', title: t('future')}
+        {page: PageConstants.Home, title: t('home')},
+        {page: PageConstants.Profile, title: t('profile')},
+        {page: PageConstants.Introduction, title: t('achievement')},
+        {page: PageConstants.Experience, title: t('experience')},
+        {page: PageConstants.Portfolio, title: t('interest')},
+        {page: PageConstants.Future, title: t('future')},
     ];
 
     return (
@@ -109,23 +110,23 @@ const App = () => {
 
                     return (
                         <>
-                            <PageSection activePage={activePage} sectionClass="item-1" pageKey="home">
-                                <Home/>
+                            <PageSection activePage={activePage} sectionClass="item-1" pageKey={PageConstants.Home}>
+                                <Home />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-2" pageKey="profile">
-                                <Profile/>
+                            <PageSection activePage={activePage} sectionClass="item-2" pageKey={PageConstants.Profile}>
+                                <Profile />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-3" pageKey="achievement">
-                                <Introduction/>
+                            <PageSection activePage={activePage} sectionClass="item-3" pageKey={PageConstants.Introduction}>
+                                <Introduction />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-4" pageKey="experience">
-                                <Experience/>
+                            <PageSection activePage={activePage} sectionClass="item-4" pageKey={PageConstants.Experience}>
+                                <Experience />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-5" pageKey="interest">
-                                <Portfolio/>
+                            <PageSection activePage={activePage} sectionClass="item-5" pageKey={PageConstants.Portfolio}>
+                                <Portfolio />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-6" pageKey="future">
-                                <Future/>
+                            <PageSection activePage={activePage} sectionClass="item-6" pageKey={PageConstants.Future}>
+                                <Future />
                             </PageSection>
                         </>
                     );
