@@ -14,6 +14,7 @@ import {useTranslation} from 'react-i18next';
 import PageSection from './components/PageSection';
 import {PageConstants} from "@/utils/constants";
 import Skill from "@/components/PageSection/Skill";
+import Contact from "@/components/PageSection/Contact";
 
 declare global {
     interface Window {
@@ -75,6 +76,7 @@ const App = () => {
             PageConstants.Portfolio,
             PageConstants.Future,
             PageConstants.Skill,
+            PageConstants.Contact,
         ],
         afterLoad: (origin, destination, direction) => {
             setActivePage(destination.anchor as string);
@@ -98,6 +100,7 @@ const App = () => {
         {page: PageConstants.Portfolio, title: t('navigation.portfolio')},
         {page: PageConstants.Future, title: t('navigation.future')},
         {page: PageConstants.Skill, title: t('navigation.skill')},
+        {page: PageConstants.Contact, title: t('navigation.contact')},
     ];
 
     return (
@@ -133,6 +136,9 @@ const App = () => {
                             </PageSection>
                             <PageSection activePage={activePage} sectionClass="skill-section" pageKey={PageConstants.Skill}>
                                 <Skill />
+                            </PageSection>
+                            <PageSection activePage={activePage} sectionClass="contact-section" pageKey={PageConstants.Contact}>
+                                <Contact />
                             </PageSection>
                         </>
                     );

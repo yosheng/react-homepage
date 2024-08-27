@@ -6,4 +6,5 @@ export namespace PageConstants {
     export const Portfolio = "portfolio";
     export const Future = "future";
     export const Skill = "skill";
+    export const Contact = "contact";
 }

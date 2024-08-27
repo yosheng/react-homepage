@@ -1,0 +1,17 @@
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.contact-text {
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.contact-icons a {
+  margin: 8px;
+}

@@ -21,6 +21,7 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
         { id: PageConstants.Portfolio, text: t('navigation.portfolio') },
         { id: PageConstants.Future, text: t('navigation.future') },
         { id: PageConstants.Skill, text: t('navigation.skill') },
+        { id: PageConstants.Contact, text: t('navigation.contact') },
     ];
 
     useEffect(() => {
