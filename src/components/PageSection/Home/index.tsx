@@ -4,13 +4,16 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFacebook, faGithub, faLinkedin, faSlideshare, faWordpress} from '@fortawesome/free-brands-svg-icons';
 import {faCakeCandles, faChevronDown, faLocationDot, faMapLocation} from '@fortawesome/free-solid-svg-icons';
 import './style.scss';
+import {useTranslation} from 'react-i18next';
 
 const Home: React.FC = () => {
 
+    const {t} = useTranslation();
+
     const introData = [
-        {icon: faLocationDot, label: 'Residence', value: 'ShangHai'},
-        {icon: faMapLocation, label: 'From', value: 'Taiwan'},
-        {icon: faCakeCandles, label: 'Birthday', value: '1993.03'},
+        {icon: faLocationDot, label: t('home.residence'), value: t('home.residence.value')},
+        {icon: faMapLocation, label: t('home.from'), value: t('home.from.value')},
+        {icon: faCakeCandles, label: t('home.birth'), value: t('home.birth.value')},
     ];
 
     return (
@@ -25,8 +28,8 @@ const Home: React.FC = () => {
                     }}
                 ></div>
             </Row>
-            <Col xs={12} className="d-none d-sm-block resume-name-big">張又升</Col>
-            <Col xs={12} className="d-sm-none resume-name">張又升</Col>
+            <Col xs={12} className="d-none d-sm-block resume-name-big">{t('home.name')}</Col>
+            <Col xs={12} className="d-sm-none resume-name">{t('home.name')}</Col>
             <Col
                 xs={12}
                 className="motto resume-hide hinge-sty"

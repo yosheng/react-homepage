@@ -4,5 +4,13 @@
   "navigation.introduction": "Introduction",
   "navigation.experience": "Experience",
   "navigation.portfolio": "Portfolio",
-  "navigation.future": "Future"
+  "navigation.future": "Future",
+  "navigation.skill": "Skill",
+  "home.name": "You-Sheng, Zhang",
+  "home.residence": "Residence",
+  "home.residence.value": "ShangHai",
+  "home.from": "From",
+  "home.from.value": "Taiwan",
+  "home.birth": "Birth",
+  "home.birth.value": "1993"
 }

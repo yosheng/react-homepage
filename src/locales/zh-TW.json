@@ -1,8 +1,16 @@
 {
-  "navigation.home": "主頁",
+  "navigation.home": "首頁",
   "navigation.profile": "基本資料",
   "navigation.introduction": "簡介",
   "navigation.experience": "經歷",
   "navigation.portfolio": "作品集",
-  "navigation.future": "展望未來"
+  "navigation.future": "展望未來",
+  "navigation.skill": "技能",
+  "home.name": "張又升",
+  "home.residence": "居住",
+  "home.residence.value": "上海",
+  "home.from": "來自",
+  "home.from.value": "台灣",
+  "home.birth": "出生",
+  "home.birth.value": "1993"
 }

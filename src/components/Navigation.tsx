@@ -14,6 +14,15 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
 
     const {t} = useTranslation();
 
+    const navigationLinks = [
+        { id: PageConstants.Profile, text: t('navigation.profile'), active: true },
+        { id: PageConstants.Introduction, text: t('navigation.introduction') },
+        { id: PageConstants.Experience, text: t('navigation.experience') },
+        { id: PageConstants.Portfolio, text: t('navigation.portfolio') },
+        { id: PageConstants.Future, text: t('navigation.future') },
+        { id: PageConstants.Skill, text: t('navigation.skill') },
+    ];
+
     useEffect(() => {
         switch (activePage) {
             case PageConstants.Home:
@@ -22,14 +31,14 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
             case PageConstants.Profile:
                 setBackground('black');
                 break;
-            case PageConstants.Introduction: // 添加这个 case
-                setBackground('blue'); // 可以根据需求调整颜色
+            case PageConstants.Introduction:
+                setBackground('blue');
                 break;
             case PageConstants.Experience:
                 setBackground('black');
                 break;
-            case PageConstants.Portfolio: // 添加这个 case
-                setBackground('black'); // 可以根据需求调整颜色
+            case PageConstants.Portfolio:
+                setBackground('black');
                 break;
             case PageConstants.Future:
                 setBackground('blue');
@@ -54,21 +63,16 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                     <Nav id="menu">
-                        <Nav.Link href={`#${PageConstants.Profile}`} data-menuanchor={PageConstants.Profile} className="active">
-                            {t('navigation.profile')}
-                        </Nav.Link>
-                        <Nav.Link href={`#${PageConstants.Introduction}`} data-menuanchor={PageConstants.Introduction}>
-                            {t('navigation.introduction')}
-                        </Nav.Link>
-                        <Nav.Link href={`#${PageConstants.Experience}`} data-menuanchor={PageConstants.Experience}>
-                            {t('navigation.experience')}
-                        </Nav.Link>
-                        <Nav.Link href={`#${PageConstants.Portfolio}`} data-menuanchor={PageConstants.Portfolio}>
-                            {t('navigation.portfolio')}
-                        </Nav.Link>
-                        <Nav.Link href={`#${PageConstants.Future}`} data-menuanchor={PageConstants.Future}>
-                            {t('navigation.future')}
-                        </Nav.Link>
+                        {navigationLinks.map((link, index) => (
+                            <Nav.Link
+                                key={index}
+                                href={`#${link.id}`}
+                                data-menuanchor={link.id}
+                                className={link.active ? 'active' : undefined}
+                            >
+                                {link.text}
+                            </Nav.Link>
+                        ))}
                         <Form className="d-flex">
                             <Form.Select className="language-selector" aria-label="语言选择"
                                          onChange={handleLanguageChange} defaultValue={i18n.language}>

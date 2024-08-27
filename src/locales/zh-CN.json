@@ -4,5 +4,13 @@
   "navigation.introduction": "简介",
   "navigation.experience": "经历",
   "navigation.portfolio": "作品集",
-  "navigation.future": "展望未来"
+  "navigation.future": "展望未来",
+  "navigation.skill": "技能",
+  "home.name": "张又升",
+  "home.residence": "居住",
+  "home.residence.value": "上海",
+  "home.from": "来自",
+  "home.from.value": "台湾",
+  "home.birth": "出生",
+  "home.birth.value": "1993"
 }

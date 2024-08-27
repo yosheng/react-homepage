@@ -6,84 +6,67 @@
   padding-right: 15px;
 }
 
-.item {
+.font-setting {
   text-align: center;
   font: 50px "Microsoft Yahei";
   color: #fff;
 }
 
-.item-1 {
-  @extend .item;
-}
-
-.item-2 {
-  @extend .item;
-}
-
-.item-4 {
-  @extend .item;
-
-  .fp-tableCell {
-    vertical-align: top;
-    padding-top: 100px;
-  }
-}
-
-.item-6 {
-  @extend .item;
-}
-
-.page-content {
-  display: none; /* 默认隐藏 */
-}
-
-.page-content.visible {
-  display: block; /* 显示 */
-}
-
-.page-content.hidden {
-  display: none; /* 隐藏 */
-}
-
-/********基本END***************/
-
-/*********************设置背景************************************/
-
-.item-1 {
+.home-section {
+  @extend .font-setting;
   background: url("~@/assets/images/board-wallpapers.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-.item-2 {
+.profile-section {
+  @extend .font-setting;
   background: url("~@/assets/images/Chalk-board-wallpaper-hd.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-.item-4 {
+.experience-section {
+  @extend .font-setting;
   background: url("~@/assets/images/bg2.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-.item-5 {
+.portfolio-section {
   background: url("~@/assets/images/bg1.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-.item-6 {
+.future-section {
+  @extend .font-setting;
   background: url("~@/assets/images/pure.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
-  // width: 100%;
-  // height: 100%;
-  // position: fixed;
-  // display: none;
 }
 
-/**********************设置背景End*****************************************/
+.skill-section {
+  @extend .font-setting;
+  background: url("~@/assets/images/Chalk-board-wallpaper-hd.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.page-content {
+  display: none;
+}
+
+.page-content.visible {
+  display: block;
+}
+
+.page-content.hidden {
+  display: none;
+}
+
+/********基本END***************/
+
 body {
   font-family: microsoft yahei, sans-serif;
   tap-heilight-color: transparent;
@@ -94,19 +77,10 @@ a {
   color: #ffffff;
 }
 
-.f-left {
-  float: left;
-}
-
-.f-right {
-  float: right;
-}
-
-
 /********************右側導航欄*************************************/
 
 #nav-dot {
-  top: 80%;
+  top: 75%;
   position: fixed;
   margin-top: -48px;
   right: 17px;

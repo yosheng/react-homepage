@@ -13,6 +13,7 @@ import {Tooltip} from "react-bootstrap";
 import {useTranslation} from 'react-i18next';
 import PageSection from './components/PageSection';
 import {PageConstants} from "@/utils/constants";
+import Skill from "@/components/PageSection/Skill";
 
 declare global {
     interface Window {
@@ -73,6 +74,7 @@ const App = () => {
             PageConstants.Experience,
             PageConstants.Portfolio,
             PageConstants.Future,
+            PageConstants.Skill,
         ],
         afterLoad: (origin, destination, direction) => {
             setActivePage(destination.anchor as string);
@@ -95,6 +97,7 @@ const App = () => {
         {page: PageConstants.Experience, title: t('navigation.experience')},
         {page: PageConstants.Portfolio, title: t('navigation.portfolio')},
         {page: PageConstants.Future, title: t('navigation.future')},
+        {page: PageConstants.Skill, title: t('navigation.skill')},
     ];
 
     return (
@@ -110,23 +113,26 @@ const App = () => {
 
                     return (
                         <>
-                            <PageSection activePage={activePage} sectionClass="item-1" pageKey={PageConstants.Home}>
+                            <PageSection activePage={activePage} sectionClass="home-section" pageKey={PageConstants.Home}>
                                 <Home />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-2" pageKey={PageConstants.Profile}>
+                            <PageSection activePage={activePage} sectionClass="profile-section" pageKey={PageConstants.Profile}>
                                 <Profile />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-3" pageKey={PageConstants.Introduction}>
+                            <PageSection activePage={activePage} sectionClass="introduction-section" pageKey={PageConstants.Introduction}>
                                 <Introduction />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-4" pageKey={PageConstants.Experience}>
+                            <PageSection activePage={activePage} sectionClass="experience-section" pageKey={PageConstants.Experience}>
                                 <Experience />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-5" pageKey={PageConstants.Portfolio}>
+                            <PageSection activePage={activePage} sectionClass="portfolio-section" pageKey={PageConstants.Portfolio}>
                                 <Portfolio />
                             </PageSection>
-                            <PageSection activePage={activePage} sectionClass="item-6" pageKey={PageConstants.Future}>
+                            <PageSection activePage={activePage} sectionClass="future-section" pageKey={PageConstants.Future}>
                                 <Future />
+                            </PageSection>
+                            <PageSection activePage={activePage} sectionClass="skill-section" pageKey={PageConstants.Skill}>
+                                <Skill />
                             </PageSection>
                         </>
                     );
