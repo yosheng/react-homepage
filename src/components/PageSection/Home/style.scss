@@ -13,6 +13,7 @@
 .motto {
   font-size: 25px;
 }
+
 .next-page {
   position: absolute;
   margin-left: -35px;
@@ -23,6 +24,7 @@
   height: 70px;
   border-radius: 50%;
 }
+
 .next-page,
 .next-page:hover,
 .next-page:focus {
@@ -36,6 +38,7 @@
   animation: fadeInUp 2s ease;
   -webkit-animation: fadeInUp 2 ease;
 }
+
 .next-page:hover {
   background: rgba(51, 51, 51, 1);
 }
@@ -58,8 +61,23 @@
 }
 
 .social-links {
-  margin-bottom: 25px;
   font-size: 3rem;
+}
+
+.intro-section {
+  margin: 0 auto;
+  padding-top: 5px;
+  font-size: 16px;
+  width: 200px;
+
+  span svg {
+    margin-left: 5px;
+  }
+
+  .intro-section-row {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /********************首頁***************************************/
