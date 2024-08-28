@@ -15,21 +15,17 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
     const {t} = useTranslation();
 
     const navigationLinks = [
-        { id: PageConstants.Profile, text: t('navigation.profile'), active: true },
-        { id: PageConstants.Introduction, text: t('navigation.introduction') },
+        { id: PageConstants.Introduction, text: t('navigation.introduction'), active: true},
+        { id: PageConstants.Skill, text: t('navigation.skill') },
         { id: PageConstants.Experience, text: t('navigation.experience') },
         { id: PageConstants.Portfolio, text: t('navigation.portfolio') },
         { id: PageConstants.Future, text: t('navigation.future') },
-        { id: PageConstants.Skill, text: t('navigation.skill') },
         { id: PageConstants.Contact, text: t('navigation.contact') },
     ];
 
     useEffect(() => {
         switch (activePage) {
             case PageConstants.Home:
-                setBackground('black');
-                break;
-            case PageConstants.Profile:
                 setBackground('black');
                 break;
             case PageConstants.Introduction:
