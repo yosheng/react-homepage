@@ -1,9 +1,11 @@
-.title {
+.experience-title {
+  display: inline-block;
   -webkit-animation: flipInY 2s linear;
   animation: flipInY 2s linear;
 }
 
-.sign {
+.experience-sign {
+  font-size: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   -webkit-animation: flip 1s linear;
