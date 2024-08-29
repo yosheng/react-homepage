@@ -42,7 +42,19 @@ const Portfolio = () => {
 
     return (
         <>
-            {/* 第一屏 */}
+            <div className="slide">
+                <Container>
+                    <Swiper {...swiperOption}>
+                        {swiperSlides.map((slide, index) => (
+                            <SwiperSlide key={index}>
+                                <span className="tip">{slide.title}</span>
+                                <img src={slide.img} alt={slide.title} />
+                            </SwiperSlide>
+                        ))}
+                        <div className="swiper-pagination"></div>
+                    </Swiper>
+                </Container>
+            </div>
             <div className="slide">
                 <Container>
                     <Row>
@@ -157,8 +169,6 @@ const Portfolio = () => {
                     </Row>
                 </Container>
             </div>
-
-            {/* 第二屏 */}
             <div className="slide">
                 <Container>
                     <Row>
