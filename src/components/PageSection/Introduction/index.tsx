@@ -55,7 +55,9 @@ const Introduction = () => {
                                 <div className="media-heading">技术与开发</div>
                             </div>
                             <div className="media-body">
-                                我是一个 DevOps 狂热的开发者，拥有超过5年的后端开发经验和1年以上的前端开发经验，在全栈开发上有着扎实的技能。我熟悉配置 CI/CD 环境，利用 Docker 进行容器化部署，并在 Jenkins 上搭建自动化流程。此外，我还掌握写爬虫编程获取网站获取信息及通过 Android 逆向分析开发自动签到脚本。我善于沟通，能够深刻理解用户需求，并交付实际可靠的产品。
+                                我是一个 DevOps 狂热的开发者，拥有超过5年的后端开发经验和1年以上的前端开发经验，在全栈开发上有着扎实的技能。我熟悉配置
+                                CI/CD 环境，利用 Docker 进行容器化部署，并在 Jenkins 上搭建自动化流程。此外，我还掌握写爬虫编程获取网站获取信息及通过
+                                Android 逆向分析开发自动签到脚本。我善于沟通，能够深刻理解用户需求，并交付实际可靠的产品。
                             </div>
                         </div>
                         <div className="media">
@@ -63,10 +65,13 @@ const Introduction = () => {
                                 <a href="#">
                                     <img className="media-object" src={repairImg} alt="System Maintenance"/>
                                 </a>
-                                <div className="media-heading">系統維護</div>
+                                <div className="media-heading">设备与系统</div>
                             </div>
                             <div className="media-body">
-                                我喜欢折腾各种设备和系统，从 Android 刷机到苹果设备越狱（Jailbreak），再到帮朋友修电脑，配置 Grub4dos 和 rEFInd 进行引导管理。我也会刷路由器的 OpenWrt 固件，并亲手搭建黑苹果（Hackintosh）电脑。在存储和虚拟化领域，我熟练配置 NAS 系统，如 Synology DSM、Nas4Free、FreeNAS、OpenMediaVault，并能进行 ESXi 的虚拟化配置。
+                                我喜欢折腾各种设备和系统，从 Android 刷机到苹果设备越狱（Jailbreak），再到帮朋友修电脑，配置
+                                Grub4dos 和 rEFInd 进行引导管理。我也会刷路由器的 OpenWrt
+                                固件，并亲手搭建黑苹果（Hackintosh）电脑。在存储和虚拟化领域，我熟练配置 NAS 系统，如 Synology
+                                DSM、Nas4Free、FreeNAS、OpenMediaVault，并能进行 ESXi 的虚拟化配置。
                             </div>
                         </div>
                         <div className="media">
@@ -83,12 +88,23 @@ const Introduction = () => {
                     </div>
                 </Col>
                 <Col md={6} className="d-none d-sm-block">
-                    <div style={{textAlign: 'center'}}>
-                        <a href="https://who.shu.edu.tw/yosheng0323">
-                            <FontAwesomeIcon style={{height: 60, width: 60, color: "#0d6efd"}} icon={faSchool} fixedWidth/>
-                        </a>
-                        <div>世新大學 資管系 網科組</div>
-                        <div>同濟大學 計算機科學 交換生</div>
+                    <div>
+                        <div className="introduction-paragraph">
+                            <a href="#" className="introduction-icon">
+                                <img className="media-object" src={profileImg} alt="Others"/>
+                            </a>
+                            <div className="introduction-heading">教育与证书</div>
+                        </div>
+                        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                            <a href="https://who.shu.edu.tw/yosheng0323" style={{marginRight: 10}}>
+                                <FontAwesomeIcon style={{height: 60, width: 60, color: "#0d6efd"}} icon={faSchool}
+                                                 fixedWidth/>
+                            </a>
+                            <div>
+                                <div>世新大學 資管系 網科組</div>
+                                <div>同濟大學 計算機科學 交換生</div>
+                            </div>
+                        </div>
                     </div>
                     <Swiper {...swiperOption} className="license-container">
                         {swiperSlides.map((slide, index) => (

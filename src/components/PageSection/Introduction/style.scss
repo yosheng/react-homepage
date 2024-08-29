@@ -141,6 +141,7 @@
 .skill-introduce .media-title {
   display: flex;
   align-items: center;
+
   div {
     margin-left: 10px;
     font-size: 1.3rem;
@@ -151,7 +152,7 @@
   width: 100%;
 }
 
-.skill-introduce .media-body{
+.skill-introduce .media-body {
   font-size: 14px;
   color: #000;
   font-family: microsoft yahei, sans-serif;
@@ -179,4 +180,25 @@
   animation: bounceInLeft 2s linear forwards;
   -webkit-animation: bounceInLeft 2s linear forwards;
   -webkit-animation-delay: 2s;
+}
+
+
+.introduction-paragraph {
+  display: flex;
+  align-items: center;
+
+  .introduction-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .introduction-heading {
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
 }
