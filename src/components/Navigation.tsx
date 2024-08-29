@@ -19,7 +19,6 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
         { id: PageConstants.Skill, text: t('navigation.skill') },
         { id: PageConstants.Experience, text: t('navigation.experience') },
         { id: PageConstants.Portfolio, text: t('navigation.portfolio') },
-        { id: PageConstants.Future, text: t('navigation.future') },
         { id: PageConstants.Contact, text: t('navigation.contact') },
     ];
 
@@ -36,9 +35,6 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
                 break;
             case PageConstants.Portfolio:
                 setBackground('black');
-                break;
-            case PageConstants.Future:
-                setBackground('blue');
                 break;
             default:
                 setBackground('black');

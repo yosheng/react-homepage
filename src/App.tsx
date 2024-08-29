@@ -74,7 +74,6 @@ const App = () => {
             PageConstants.Skill,
             PageConstants.Experience,
             PageConstants.Portfolio,
-            PageConstants.Future,
             PageConstants.Contact,
         ],
         afterLoad: (origin, destination, direction) => {
@@ -97,7 +96,6 @@ const App = () => {
         {page: PageConstants.Skill, title: t('navigation.skill')},
         {page: PageConstants.Experience, title: t('navigation.experience')},
         {page: PageConstants.Portfolio, title: t('navigation.portfolio')},
-        {page: PageConstants.Future, title: t('navigation.future')},
         {page: PageConstants.Contact, title: t('navigation.contact')},
     ];
 
@@ -128,9 +126,6 @@ const App = () => {
                             </PageSection>
                             <PageSection activePage={activePage} sectionClass="portfolio-section" pageKey={PageConstants.Portfolio}>
                                 <Portfolio />
-                            </PageSection>
-                            <PageSection activePage={activePage} sectionClass="future-section" pageKey={PageConstants.Future}>
-                                <Future />
                             </PageSection>
                             <PageSection activePage={activePage} sectionClass="contact-section" pageKey={PageConstants.Contact}>
                                 <Contact />
