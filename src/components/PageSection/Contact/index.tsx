@@ -1,8 +1,9 @@
 import React, {useState, FormEvent} from 'react';
 import {Container, Form, Button, Row, Col} from 'react-bootstrap';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faTelegram, faWeixin, faWordpress} from "@fortawesome/free-brands-svg-icons";
+import {faLine, faTelegram, faWeixin, faWordpress} from "@fortawesome/free-brands-svg-icons";
 import './style.scss'
+import {TagCloud, TagCloudOptions} from "@frank-mayer/react-tag-cloud";
 
 const Contact: React.FC = () => {
     const [name, setName] = useState('');
@@ -23,7 +24,50 @@ const Contact: React.FC = () => {
         <Container>
             <Row>
                 <Col md={6} xs={12}>
-                    <h2>联系我</h2>
+                    <div className="contact-info">
+                        <div className="contact-text">如果你也有相同兴趣欢迎添加我好友或者发送邮件给我！</div>
+                        <TagCloud
+                            options={(w: Window & typeof globalThis): TagCloudOptions => ({
+                                radius: Math.min(300, w.innerWidth, w.innerHeight) / 2,
+                                maxSpeed: "normal",
+                                // useContainerInlineStyles: false,
+                                // containerClass: "tag-container"
+                            })}
+                            onClick={(tag: string, ev: MouseEvent) => alert(tag)}
+                            onClickOptions={{passive: true}}
+                            className="tag-cloud"
+                        >
+                            {[
+                                "AI",
+                                "游戏",
+                                "塔羅",
+                                "动漫",
+                                "摄影",
+                                "操作系统",
+                                "单元测试",
+                                "性能优化",
+                                "逆向分析",
+                                "网路爬虫",
+                                "设计模式",
+                                "领域驱动设计",
+                            ]}
+                        </TagCloud>
+
+                        <div className="contact-icons">
+                            <a href="https://t.me/yosheng0323">
+                                <FontAwesomeIcon icon={faTelegram} size="4x" fixedWidth/>
+                            </a>
+                            <a href="weixin://dl/addfriend?nickName=yosheng0323&source=homepage">
+                                <FontAwesomeIcon icon={faWeixin} size="4x" fixedWidth/>
+                            </a>
+                            <a href="https://line.me/yosheng0323">
+                                <FontAwesomeIcon icon={faLine} size="4x" fixedWidth/>
+                            </a>
+                        </div>
+                    </div>
+                </Col>
+                <Col md={6} xs={12} className="d-none d-sm-block">
+                    <h2>写信给我</h2>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group className="mb-3">
                             <Form.Label>姓名</Form.Label>
@@ -63,19 +107,6 @@ const Contact: React.FC = () => {
                             发送
                         </Button>
                     </Form>
-                </Col>
-                <Col md={6} xs={12}>
-                    <div className="contact-info">
-                        <div className="contact-text">如果你有任何问题欢迎添加我好友或者发送邮件跟我联络！</div>
-                        <div className="contact-icons">
-                            <a href="https://blog.yosheng.tw">
-                                <FontAwesomeIcon icon={faTelegram} size="4x" fixedWidth />
-                            </a>
-                            <a href="https://blog.yosheng.tw">
-                                <FontAwesomeIcon icon={faWeixin} size="4x" fixedWidth />
-                            </a>
-                        </div>
-                    </div>
                 </Col>
             </Row>
         </Container>
