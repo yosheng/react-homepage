@@ -14,7 +14,7 @@
 }
 
 .portfolio-container {
-  width: 60%;
+  width: 100%;
 }
 
 .portfolio-slide {
@@ -120,7 +120,44 @@
   opacity: 1;
 }
 
-/****************************************************第二瓶********************************************/
-.bxslider img {
-  margin: 0 auto;
+.swiper-image {
+  width: 100%; /* 使得图片宽度完全填充 swiper slide */
+  height: auto; /* 保持图片的原始宽高比 */
+}
+
+.swiper-content {
+  text-align: center; /* 可选，用于居中对齐图片和标题 */
+}
+
+.carousel-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: calc(100vh - 40px); /* 减去标题的高度 */
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.carousel-item-title {
+  width: 100%; /* 与图片容器宽度相同 */
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
 }
