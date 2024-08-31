@@ -1,21 +1,14 @@
-.license-container {
-  //height: 300px;
-  //width: 400px;
-}
+$black: #000;
+$white: #fff;
+$font-family: microsoft yahei, sans-serif;
 
 .license-slide {
   margin-bottom: 30px;
   text-align: center;
   font-size: 38px;
   font-weight: 700;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 
   img {
@@ -26,166 +19,134 @@
   span {
     position: absolute;
     width: 100%;
-    bottom: 0px;
-    background-color: #000;
-    color: #ffffff;
+    bottom: 0;
+    background-color: $black;
+    color: $white;
     font-size: 20px;
   }
 }
 
-.sm-img {
-  opacity: 0;
-  position: absolute;
-  right: 1%;
-  bottom: 20%;
-  -webkit-animation: sm-img 1s ease forwards;
-  animation: sm-img 1s ease forwards;
-  -webkit-animation-delay: 0.5s;
-}
-
-.sm-img img {
-  width: 100%;
-  display: block;
-}
-
-.skills {
+.subject-group {
   margin-top: 10px;
-}
 
-.skills span {
-  position: absolute;
-  left: 60%;
-  color: #000000;
-  transform: scale(0.5);
-}
+  .subject-text {
+    position: absolute;
+    left: 60%;
+    color: $black;
+    transform: scale(0.5);
+    animation: bounceIn 2s linear forwards;
+  }
 
-.subject-1 {
-  font-size: 48px;
-  margin-left: -400px;
-  margin-top: -50px;
-}
+  .subject-1 {
+    @extend .subject-text;
+    font-size: 48px;
+    margin-left: -430px;
+    margin-top: -30px;
+  }
 
-.subject-2 {
-  font-size: 18px;
-  margin-left: -250px;
-  margin-top: 40px;
-}
+  .subject-2 {
+    @extend .subject-text;
+    font-size: 18px;
+    margin-left: -250px;
+    margin-top: 40px;
+  }
 
-.subject-3 {
-  font-size: 14px;
-  margin-left: -270px;
-  margin-top: 10px;
-}
+  .subject-3 {
+    @extend .subject-text;
+    font-size: 14px;
+    margin-left: -360px;
+    margin-top: 45px;
+  }
 
-.subject-4 {
-  font-size: 20px;
-  margin-left: -200px;
-  margin-top: -30px;
-}
+  .subject-4 {
+    @extend .subject-text;
+    font-size: 20px;
+    margin-left: -270px;
+    margin-top: -30px;
+  }
 
-.subject-5 {
-  font-size: 20px;
-  margin-left: -120px;
-  margin-top: 50px;
-}
+  .subject-5 {
+    @extend .subject-text;
+    font-size: 20px;
+    margin-left: -120px;
+    margin-top: 50px;
+  }
 
-.subject-6 {
-  font-size: 30px;
-  margin-left: 81px;
-  margin-top: -35px;
-}
+  .subject-6 {
+    @extend .subject-text;
+    font-size: 30px;
+    margin-left: 81px;
+    margin-top: -15px;
+  }
 
-.subject-7 {
-  font-size: 16px;
-  margin-left: 0px;
-  margin-top: -40px;
-}
-
-.subject-8 {
-  font-size: 20px;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.subject-9 {
-  font-size: 18px;
-  margin-left: 2px;
-  margin-top: 41px;
-}
-
-.subject-10 {
-  font-size: 18px;
-  margin-left: -150px;
-  margin-top: 10px;
-}
-
-.skills span {
-  animation: bounceIn 2s linear forwards;
-  -webkit-animation: bounceIn 2s linear forwards;
-}
-
-.skill-introduce {
-  text-align: left;
-  // position: absolute;
-  // top: 20%;
-  // left: 10%;
-  color: #000000;
-}
-
-.skill-introduce a {
-  display: block;
-  width: 40px;
-  height: 40px;
-}
-
-.skill-introduce .media-title {
-  display: flex;
-  align-items: center;
-
-  div {
+  .subject-7 {
+    @extend .subject-text;
+    font-size: 16px;
     margin-left: 10px;
-    font-size: 1.3rem;
+    margin-top: -15px;
+  }
+
+  .subject-8 {
+    @extend .subject-text;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .subject-9 {
+    @extend .subject-text;
+    font-size: 18px;
+    margin-left: 2px;
+    margin-top: 41px;
+  }
+
+  .subject-10 {
+    @extend .subject-text;
+    font-size: 18px;
+    margin-left: -150px;
+    margin-top: 10px;
   }
 }
 
-.skill-introduce a img {
-  width: 100%;
-}
-
-.skill-introduce .media-body {
-  font-size: 14px;
-  color: #000;
-  font-family: microsoft yahei, sans-serif;
-}
-
-.skill-introduce .media {
-  margin-bottom: 20px;
-}
-
-.skill-introduce .media:nth-child(1) {
-  opacity: 1;
-  animation: bounceInLeft 2s linear forwards;
-  -webkit-animation: bounceInLeft 2s linear forwards;
-}
-
-.skill-introduce .media:nth-child(2) {
-  opacity: 1;
-  animation: bounceInRight 2s linear forwards;
-  -webkit-animation: bounceInRight 2s linear forwards;
-  -webkit-animation-delay: 1s;
-}
-
-.skill-introduce .media:nth-child(3) {
-  opacity: 1;
-  animation: bounceInLeft 2s linear forwards;
-  -webkit-animation: bounceInLeft 2s linear forwards;
-  -webkit-animation-delay: 2s;
-}
-
-
 .introduction-paragraph {
+  a {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  .introduction-content {
+    font-size: 0.9em;
+    color: $black;
+    font-family: $font-family;
+  }
+
+  .media {
+    margin-bottom: 20px;
+
+    &:nth-child(1) {
+      opacity: 1;
+      animation: bounceInLeft 2s linear forwards;
+    }
+
+    &:nth-child(2) {
+      opacity: 1;
+      animation: bounceInRight 2s linear forwards;
+      animation-delay: 1s;
+    }
+
+    &:nth-child(3) {
+      opacity: 1;
+      animation: bounceInLeft 2s linear forwards;
+      animation-delay: 2s;
+    }
+  }
+}
+
+.introduction-title {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 
   .introduction-icon {
     display: block;
