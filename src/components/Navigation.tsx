@@ -53,7 +53,7 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
                 <Navbar.Brand href={`#${PageConstants.Home}`} data-menuanchor={PageConstants.Home}>
                     Yosheng Zhang
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" id="responsive-toggle"/>
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                     <Nav id="menu">
                         {navigationLinks.map((link, index) => (

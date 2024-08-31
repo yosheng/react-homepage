@@ -1,5 +1,3 @@
-/**********************導航條**********************************/
-
 .resume {
   position: fixed;
   right: 0;
@@ -51,9 +49,12 @@
 .language-selector {
   color: rgba(255, 255, 255, 0.75);
   background-color: transparent;
+
   option {
     background-color: gray;
   }
 }
 
-/********************導航條End***************************************/
+#responsive-toggle {
+  width: auto !important;
+}
