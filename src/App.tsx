@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './App.scss';
-import ReactFullpage, {fullpageOptions, fullpageApi} from '@fullpage/react-fullpage';
+import ReactFullpage, {fullpageOptions} from '@fullpage/react-fullpage';
 import Home from "@/components/PageSection/Home";
-import Profile from "@/components/PageSection/Profile";
 import Introduction from "components/PageSection/Introduction";
 import Experience from "@/components/PageSection/Experience";
 import Portfolio from "components/PageSection/Portfolio";
-import Future from "@/components/PageSection/Future";
 import Navigation from "@/components/Navigation";
 import OverlayTrigger from 'react-bootstrap/esm/OverlayTrigger';
 import {Tooltip} from "react-bootstrap";
@@ -54,7 +52,7 @@ const App = () => {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [window.fullpage_api]);
+    }, []);
 
     const options: fullpageOptions = {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
