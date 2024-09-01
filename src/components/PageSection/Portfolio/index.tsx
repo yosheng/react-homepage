@@ -5,15 +5,15 @@ import 'react-multi-carousel/lib/styles.css';
 import 'swiper/css';
 import './style.scss';
 
-import aiPlatformImg from '@/assets/images/page-5/aiPlatform.png';
-import cardsCreationImg from '@/assets/images/page-5/cardsCreation.png';
-import collegePortfolioImg from '@/assets/images/page-5/collegePortfolio.png';
-import feideeParserImg from '@/assets/images/page-5/feideeParser.png';
-import homeJqImg from '@/assets/images/page-5/homeJq.png';
-import homeVueImg from '@/assets/images/page-5/homeVue.png';
-import suiHelperImg from '@/assets/images/page-5/suiHelper.png';
-import tarotNoteImg from '@/assets/images/page-5/tarotNote.png';
-import zybuyImg from '@/assets/images/page-5/zybuy.png';
+import aiPlatformImg from '@/assets/images/portfolio/aiPlatform.png';
+import cardsCreationImg from '@/assets/images/portfolio/cardsCreation.png';
+import collegePortfolioImg from '@/assets/images/portfolio/collegePortfolio.png';
+import feideeParserImg from '@/assets/images/portfolio/feideeParser.png';
+import homeJqImg from '@/assets/images/portfolio/homeJq.png';
+import homeVueImg from '@/assets/images/portfolio/homeVue.png';
+import suiHelperImg from '@/assets/images/portfolio/suiHelper.png';
+import tarotNoteImg from '@/assets/images/portfolio/tarotNote.png';
+import zybuyImg from '@/assets/images/portfolio/zybuy.png';
 
 
 const CustomDot = ({ onClick, active }: DotProps) => {
@@ -120,7 +120,7 @@ const Portfolio = () => {
                     <div key={index} className="carousel-item-wrapper">
                         <img src={slide.img} alt={slide.title}/>
                         <div className="carousel-item-content">
-                            <a href="https://fb.me">{slide.title}</a>
+                            <a href={slide.url}>{slide.title}</a>
                         </div>
                     </div>
                 ))}

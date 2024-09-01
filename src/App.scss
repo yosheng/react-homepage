@@ -14,7 +14,7 @@
 
 .home-section {
   @extend .font-setting;
-  background: url("~@/assets/images/board-wallpapers.jpg") no-repeat center center;
+  background: url("~@/assets/images/calm_ocean_at_sunset-wallpaper.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -53,9 +53,13 @@
   background-size: cover;
 }
 
-
 .contact-section {
   background: url("~@/assets/images/pure.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.introduction-section {
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -76,7 +80,6 @@
 
 body {
   font-family: microsoft yahei, sans-serif;
-  tap-heilight-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
 

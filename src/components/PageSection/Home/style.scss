@@ -1,5 +1,4 @@
 .resume-name {
-  color: #b6bf31;
   text-shadow: 9px -2px 15px #000;
 }
 
@@ -69,6 +68,7 @@
   padding-top: 5px;
   font-size: 16px;
   width: 200px;
+  text-shadow: 0px 0px 6px #000;
 
   span svg {
     margin-left: 5px;
@@ -93,7 +93,7 @@
   position: relative;
   width: 170px;
   height: 170px;
-  background-image: url(~@/assets/images/page-1/userPic.jpg);
+  background-image: url(~@/assets/images/home/userPic.jpg);
   background-size: 100% 100%;
   border: 5px solid #fff;
 }

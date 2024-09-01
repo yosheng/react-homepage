@@ -1,14 +1,17 @@
-import React, {useState, FormEvent} from 'react';
-import {Container, Form, Button, Row, Col} from 'react-bootstrap';
+import React, {FormEvent, useState} from 'react';
+import {Button, Col, Container, Form, Row} from 'react-bootstrap';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLine, faTelegram, faWeixin, faWordpress} from "@fortawesome/free-brands-svg-icons";
+import {faLine, faTelegram, faWeixin} from "@fortawesome/free-brands-svg-icons";
 import './style.scss'
 import {TagCloud, TagCloudOptions} from "@frank-mayer/react-tag-cloud";
+import {useTranslation} from "react-i18next";
 
 const Contact: React.FC = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
+    const {t} = useTranslation();
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
@@ -25,6 +28,7 @@ const Contact: React.FC = () => {
             <Row>
                 <Col md={6} xs={12}>
                     <div className="contact-info">
+                        <span className="contact-sign">{t('experience.sign')}</span>
                         <div className="contact-text">如果你也有相同兴趣欢迎添加我好友或者发送邮件给我！</div>
                         <TagCloud
                             options={(w: Window & typeof globalThis): TagCloudOptions => ({

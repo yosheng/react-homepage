@@ -2,13 +2,12 @@ import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import './style.scss'
 
-// 引入图片
-import asusImg from '@/assets/images/page-4/02-asus.jpg';
-import sceImg from '@/assets/images/page-4/03-sce.jpg';
-import sweetomeImg from '@/assets/images/page-4/04-sweetome.jpg';
-import futongImg from '@/assets/images/page-4/05-futong.png';
-import flexemImg from '@/assets/images/page-4/06-flexem.png';
-import synyiImg from '@/assets/images/page-4/07-synyi.png';
+import asusImg from '@/assets/images/experience/02-asus.jpg';
+import sceImg from '@/assets/images/experience/03-sce.jpg';
+import sweetomeImg from '@/assets/images/experience/04-sweetome.jpg';
+import futongImg from '@/assets/images/experience/05-futong.png';
+import flexemImg from '@/assets/images/experience/06-flexem.png';
+import synyiImg from '@/assets/images/experience/07-synyi.png';
 import {useTranslation} from "react-i18next";
 
 const Experience = () => {
@@ -58,12 +57,12 @@ const Experience = () => {
         <Container>
             <Row className="d-none d-md-block">
                 <Col xs={12}>
-                    <span className="experience-title">{t('experience.title')}</span>
-                </Col>
-            </Row>
-            <Row className="d-none d-md-block">
-                <Col xs={12}>
-                    <span className="experience-sign">{t('experience.sign')}</span>
+                    <div>
+                        <p>不畏懼任何挑戰，尋找屬於自己的舞台</p>
+                    </div>
+                    <div>
+                        <p>凡事只求盡心盡力，結果只求問心無愧</p>
+                    </div>
                 </Col>
             </Row>
             <Row>

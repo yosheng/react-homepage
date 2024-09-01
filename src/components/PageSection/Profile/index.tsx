@@ -2,10 +2,10 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './style.scss'
 
-import laptopImg from '@/assets/images/page-2/laptop.png';
-import capImg from '@/assets/images/page-2/cap.png';
-import scrollImg from '@/assets/images/page-2/scroll.png';
-import mailImg from '@/assets/images/page-2/mail.png';
+import laptopImg from '@/assets/images/profile/laptop.png';
+import capImg from '@/assets/images/profile/cap.png';
+import scrollImg from '@/assets/images/profile/scroll.png';
+import mailImg from '@/assets/images/profile/mail.png';
 
 const Profile: React.FC = () => {
     return (

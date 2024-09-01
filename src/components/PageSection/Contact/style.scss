@@ -15,3 +15,13 @@
 .contact-icons a {
   margin: 8px;
 }
+
+.contact-sign {
+  font-size: 1.7em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-animation: flip 1s linear;
+  animation: flip 1s linear;
+  color: transparent;
+  text-shadow: 0 0 6px #f96, -1px -1px #fff, 1px -1px #444;
+}

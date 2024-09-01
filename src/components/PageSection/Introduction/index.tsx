@@ -5,14 +5,14 @@ import 'swiper/css';
 import './style.scss'
 import 'swiper/scss/pagination';
 
-import codingImg from '@/assets/images/page-3/coding.png';
-import repairImg from '@/assets/images/page-3/repair.png';
-import profileImg from '@/assets/images/page-3/profle.png';
-import RHCSAImg from '@/assets/images/page-3/RHCSA.jpg';
-import RHCEImg from '@/assets/images/page-3/RHCE.jpg';
-import OCJP6Img from '@/assets/images/page-3/OCJP6.jpg';
-import Certificate1Img from '@/assets/images/page-3/Certificate_1.jpg';
-import Certificate2Img from '@/assets/images/page-3/Certificate_2.jpg';
+import codingImg from '@/assets/images/introduction/coding.png';
+import repairImg from '@/assets/images/introduction/repair.png';
+import profileImg from '@/assets/images/introduction/profle.png';
+import RHCSAImg from '@/assets/images/introduction/RHCSA.jpg';
+import RHCEImg from '@/assets/images/introduction/RHCE.jpg';
+import OCJP6Img from '@/assets/images/introduction/OCJP6.jpg';
+import Certificate1Img from '@/assets/images/introduction/Certificate_1.jpg';
+import Certificate2Img from '@/assets/images/introduction/Certificate_2.jpg';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSchool} from '@fortawesome/free-solid-svg-icons';
 import {Autoplay, Pagination} from 'swiper/modules';
