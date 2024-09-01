@@ -1,33 +1,77 @@
 import React from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import Carousel, {CarouselProps} from 'react-multi-carousel';
+import {Container} from 'react-bootstrap';
+import Carousel, {CarouselProps, DotProps} from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import 'swiper/css';
 import './style.scss';
 
-// 引入图片
-import blogImg from '@/assets/images/page-5/01-blog.jpg';
-import portfolioImg from '@/assets/images/page-5/02-portfolio.png';
-import storeManagementImg from '@/assets/images/page-5/03-Store Management.png';
-import gaeImg from '@/assets/images/page-5/04-Google App Engine.jpg';
-import memberManagementImg from '@/assets/images/page-5/05-Member Management.png';
-import webSpiderImg from '@/assets/images/page-5/06-Web spider.jpg';
-import baseballConnectionImg from '@/assets/images/page-5/07-baseball connection.jpg';
-import fightConnectionImg from '@/assets/images/page-5/08-fight connection.jpg';
-import buildNasImg from '@/assets/images/page-5/01-build nas.jpg';
-import grub4dosImg from '@/assets/images/page-5/02-grub4dos.jpg';
+import aiPlatformImg from '@/assets/images/page-5/aiPlatform.png';
+import cardsCreationImg from '@/assets/images/page-5/cardsCreation.png';
+import collegePortfolioImg from '@/assets/images/page-5/collegePortfolio.png';
+import feideeParserImg from '@/assets/images/page-5/feideeParser.png';
+import homeJqImg from '@/assets/images/page-5/homeJq.png';
+import homeVueImg from '@/assets/images/page-5/homeVue.png';
+import suiHelperImg from '@/assets/images/page-5/suiHelper.png';
+import tarotNoteImg from '@/assets/images/page-5/tarotNote.png';
+import zybuyImg from '@/assets/images/page-5/zybuy.png';
+
+
+const CustomDot = ({ onClick, active }: DotProps) => {
+    return (
+        <button
+            className={`custom-dot ${active ? "custom-dot--active" : ""}`}
+            onClick={() => onClick?.()}
+        />
+    );
+};
 
 const Portfolio = () => {
 
     const data = [
         {
-            title: '建置網路儲存裝置',
-            img: buildNasImg,
+            title: 'FeideeParser',
+            url: 'https://github.com/yosheng/FeideeParser',
+            img: feideeParserImg,
         },
         {
-            title: '整合維護工具碟',
-            img: grub4dosImg,
+            title: 'AI Platform',
+            url: 'https://ai.yosheng.tw/',
+            img: aiPlatformImg,
+        },
+        {
+            title: 'Tarot Note',
+            url: 'https://tarot-note.readthedocs.io/zh-cn/latest/',
+            img: tarotNoteImg,
+        },
+        {
+            title: 'ZyBuy',
+            url: 'https://zybuy.yosheng.tw/',
+            img: zybuyImg,
+        },
+        {
+            title: 'SuiHelper',
+            url: 'https://github.com/yosheng/SuiHelper/',
+            img: suiHelperImg,
+        },
+        {
+            title: 'CardsGameCreation',
+            url: 'https://yosheng.github.io/cards-game-creation/',
+            img: cardsCreationImg,
+        },
+        {
+            title: 'Vue Homepage',
+            url: 'https://home-vue.yosheng.tw',
+            img: homeVueImg,
+        },
+        {
+            title: 'JQuery Homepage',
+            url: 'https://home-jq.yosheng.tw',
+            img: homeJqImg,
+        },
+        {
+            title: 'College Portfolio',
+            url: 'https://portfolio.yosheng.tw/',
+            img: collegePortfolioImg,
         },
     ];
 
@@ -36,13 +80,15 @@ const Portfolio = () => {
         arrows: true,
         autoPlaySpeed: 3000,
         centerMode: false,
-        dotListClass: "",
+        showDots: true,
+        renderDotsOutside: true,
+        customDot: <CustomDot />,
+        dotListClass: "custom-dot-list-style",
         draggable: true,
         infinite: false,
         keyBoardControl: true,
         minimumTouchDrag: 80,
         renderButtonGroupOutside: false,
-        renderDotsOutside: false,
         responsive: {
             superLargeDesktop: {
                 breakpoint: {max: 4000, min: 3000},
@@ -61,7 +107,6 @@ const Portfolio = () => {
                 items: 1
             }
         },
-        showDots: true,
         sliderClass: "",
         slidesToSlide: 1,
         swipeable: true,
@@ -74,7 +119,9 @@ const Portfolio = () => {
                 {data.map((slide, index) => (
                     <div key={index} className="carousel-item-wrapper">
                         <img src={slide.img} alt={slide.title}/>
-                        <div className="carousel-item-title">{slide.title}</div>
+                        <div className="carousel-item-content">
+                            <a href="https://fb.me">{slide.title}</a>
+                        </div>
                     </div>
                 ))}
             </Carousel>

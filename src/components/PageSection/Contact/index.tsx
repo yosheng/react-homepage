@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                             <a href="weixin://dl/addfriend?nickName=yosheng0323&source=homepage">
                                 <FontAwesomeIcon icon={faWeixin} size="4x" fixedWidth/>
                             </a>
-                            <a href="https://line.me/yosheng0323">
+                            <a href="https://line.me/ti/p/m2sp97wGKo">
                                 <FontAwesomeIcon icon={faLine} size="4x" fixedWidth/>
                             </a>
                         </div>
