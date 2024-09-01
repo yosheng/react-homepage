@@ -1,0 +1,47 @@
+name: 🚀 Deploy React Homepage
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    name: 🎉 Build and Deploy
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+    - name: 🚚 Checkout Code
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: 🔨 Install Dependencies
+      run: npm ci
+
+    - name: 🔨 Build Project
+      run: npm run build --if-present
+
+    # - name: 🔨 Run Tests
+    #   run: npm test
+
+    - name: 📂 List Output Files
+      run: find build/ -print
+
+    - name: 📂 Sync Files via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_ADDRESS }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: build/
+        server-dir: /public_html/home
