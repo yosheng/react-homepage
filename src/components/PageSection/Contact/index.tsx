@@ -16,8 +16,8 @@ const Contact: React.FC = () => {
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
 
-        const subject = encodeURIComponent(`Contact from ${name}`);
-        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        const subject = encodeURIComponent(`${t('contact.emailSubject', {name})}`);
+        const body = encodeURIComponent(`${t('contact.emailBody', {name, email, message})}`);
         const mailtoLink = `mailto:yoshengzhang@qq.com?subject=${subject}&body=${body}`;
 
         window.location.href = mailtoLink;
@@ -28,33 +28,18 @@ const Contact: React.FC = () => {
             <Row>
                 <Col md={6} xs={12}>
                     <div className="contact-info">
-                        <span className="contact-sign">{t('experience.sign')}</span>
-                        <div className="contact-text">如果你也有相同兴趣欢迎添加我好友或者发送邮件给我！</div>
+                        <span className="contact-sign">{t('contact.sign')}</span>
+                        <div className="contact-text">{t('contact.welcomeMessage')}</div>
                         <TagCloud
                             options={(w: Window & typeof globalThis): TagCloudOptions => ({
                                 radius: Math.min(300, w.innerWidth, w.innerHeight) / 2,
                                 maxSpeed: "normal",
-                                // useContainerInlineStyles: false,
-                                // containerClass: "tag-container"
                             })}
                             onClick={(tag: string, ev: MouseEvent) => alert(tag)}
                             onClickOptions={{passive: true}}
                             className="tag-cloud"
                         >
-                            {[
-                                "AI",
-                                "游戏",
-                                "塔羅",
-                                "动漫",
-                                "摄影",
-                                "操作系统",
-                                "单元测试",
-                                "性能优化",
-                                "逆向分析",
-                                "网路爬虫",
-                                "设计模式",
-                                "领域驱动设计",
-                            ]}
+                            {t('contact.tags', { returnObjects: true }) as []}
                         </TagCloud>
 
                         <div className="contact-icons">
@@ -71,13 +56,13 @@ const Contact: React.FC = () => {
                     </div>
                 </Col>
                 <Col md={6} xs={12} className="d-none d-sm-block">
-                    <h2>写信给我</h2>
+                    <h2>{t('contact.form.title')}</h2>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group className="mb-3">
-                            <Form.Label>姓名</Form.Label>
+                            <Form.Label>{t('contact.form.name')}</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="请输入您的姓名"
+                                placeholder={t('contact.form.namePlaceholder')}
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 required
@@ -85,10 +70,10 @@ const Contact: React.FC = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>电子邮箱</Form.Label>
+                            <Form.Label>{t('contact.form.email')}</Form.Label>
                             <Form.Control
                                 type="email"
-                                placeholder="请输入您的电子邮箱"
+                                placeholder={t('contact.form.emailPlaceholder')}
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
@@ -96,11 +81,11 @@ const Contact: React.FC = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>内容</Form.Label>
+                            <Form.Label>{t('contact.form.message')}</Form.Label>
                             <Form.Control
                                 as="textarea"
                                 rows={5}
-                                placeholder="请输入您的消息"
+                                placeholder={t('contact.form.messagePlaceholder')}
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
                                 required
@@ -108,7 +93,7 @@ const Contact: React.FC = () => {
                         </Form.Group>
 
                         <Button variant="primary" type="submit">
-                            发送
+                            {t('contact.form.submit')}
                         </Button>
                     </Form>
                 </Col>

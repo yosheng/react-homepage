@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import SkillBar from 'react-skillbars';
 import './style.scss'
+import {useTranslation} from "react-i18next";
 
 interface Skill {
     type: string;
@@ -52,6 +53,9 @@ const SkillSection: React.FC<{ title: string, skills: Skill[] }> = ({ title, ski
 };
 
 const Skills: React.FC = () => {
+
+    const {t} = useTranslation();
+
     const backendSkills: Skill[] = [
         {type: "C#/.NET", level: 100},
         {type: "EF Core", level: 80},
@@ -88,18 +92,18 @@ const Skills: React.FC = () => {
         <Container>
             <Row>
                 <Col md={6}>
-                    <SkillSection title="后端开发" skills={backendSkills} />
+                    <SkillSection title={t('skill.backend')} skills={backendSkills} />
                 </Col>
                 <Col md={6}>
-                    <SkillSection title="前端开发" skills={frontendSkills} />
+                    <SkillSection title={t('skill.frontend')} skills={frontendSkills} />
                 </Col>
             </Row>
             <Row>
                 <Col md={6}>
-                    <SkillSection title="数据开发" skills={dataSkills} />
+                    <SkillSection title={t('skill.data_develop')} skills={dataSkills} />
                 </Col>
                 <Col md={6}>
-                    <SkillSection title="运维与网络" skills={opsSkills} />
+                    <SkillSection title={t('skill.ops')} skills={opsSkills} />
                 </Col>
             </Row>
         </Container>
