@@ -58,10 +58,10 @@ const Experience = () => {
             <Row className="d-none d-md-block">
                 <Col xs={12}>
                     <div>
-                        <p>不畏懼任何挑戰，尋找屬於自己的舞台</p>
+                        <p>{t('experience.sign1')}</p>
                     </div>
                     <div>
-                        <p>凡事只求盡心盡力，結果只求問心無愧</p>
+                        <p>{t('experience.sign2')}</p>
                     </div>
                 </Col>
             </Row>
