@@ -86,5 +86,6 @@
   "contact.form.emailPlaceholder": "请输入您的电子邮箱",
   "contact.form.message": "内容",
   "contact.form.messagePlaceholder": "请输入您的消息",
-  "contact.form.submit": "发送"
+  "contact.form.submit": "发送",
+  "contact.wechat.info": "微信号: yosheng0323"
 }

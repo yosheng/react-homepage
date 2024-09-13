@@ -1,5 +1,5 @@
 import React, {FormEvent, useState} from 'react';
-import {Button, Col, Container, Form, Row} from 'react-bootstrap';
+import {Button, Col, Container, Form, Row, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLine, faTelegram, faWeixin} from "@fortawesome/free-brands-svg-icons";
 import './style.scss'
@@ -46,9 +46,21 @@ const Contact: React.FC = () => {
                             <a href="https://t.me/yosheng0323">
                                 <FontAwesomeIcon icon={faTelegram} size="4x" fixedWidth/>
                             </a>
-                            <a href="weixin://dl/addfriend?nickName=yosheng0323&source=homepage">
-                                <FontAwesomeIcon icon={faWeixin} size="4x" fixedWidth/>
-                            </a>
+                            <OverlayTrigger
+                                placement="bottom"
+                                overlay={<Tooltip id="wechat-tooltip">{t('contact.wechat.info')}</Tooltip>}
+                            >
+                                {({ ref, ...triggerHandler }) => (
+                                    <a
+                                        href="weixin://dl/addfriend?nickName=yosheng0323&source=homepage"
+                                        ref={ref}
+                                        {...triggerHandler}
+                                        style={{ color: 'inherit', textDecoration: 'none' }}
+                                    >
+                                        <FontAwesomeIcon style={{color: "white"}} icon={faWeixin} size="4x" fixedWidth />
+                                    </a>
+                                )}
+                            </OverlayTrigger>
                             <a href="https://line.me/ti/p/m2sp97wGKo">
                                 <FontAwesomeIcon icon={faLine} size="4x" fixedWidth/>
                             </a>
