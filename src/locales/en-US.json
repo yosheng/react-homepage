@@ -86,5 +86,6 @@
   "contact.form.emailPlaceholder": "Please enter your email",
   "contact.form.message": "Message",
   "contact.form.messagePlaceholder": "Please enter your message",
-  "contact.form.submit": "Send"
+  "contact.form.submit": "Send",
+  "contact.wechat.info": "wechat: yosheng0323"
 }
