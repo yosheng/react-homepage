@@ -47,4 +47,4 @@ jobs:
         local-dir: build/
         server-dir: /public_html/home/
         protocol: ftps
-        security: strict
+        security: loose
