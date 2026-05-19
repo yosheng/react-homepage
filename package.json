@@ -3,21 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^7.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@frank-mayer/react-tag-cloud": "^1.2.1",
     "@fullpage/react-fullpage": "^0.1.42",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.104",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@types/react-i18next": "^8.1.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "i18next": "^23.13.0",
@@ -27,35 +18,22 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.1",
     "react-multi-carousel": "^2.8.5",
-    "react-scripts": "5.0.1",
     "react-skillbars": "^2.2.0",
     "sass": "^1.77.8",
-    "swiper": "^11.1.9",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "swiper": "^11.1.9"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject"
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/node": "^20.19.41",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.13",
+    "vite-tsconfig-paths": "^6.1.1"
   }
 }
