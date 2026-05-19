@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap.scss';
+@use 'bootstrap/scss/bootstrap';
 /********基本***************/
 .container {
   margin: 0 auto;
@@ -14,47 +14,47 @@
 
 .home-section {
   @extend .font-setting;
-  background: url("~@/assets/images/calm_ocean_at_sunset-wallpaper.jpg") no-repeat center center;
+  background: url("./assets/images/calm_ocean_at_sunset-wallpaper.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .profile-section {
   @extend .font-setting;
-  background: url("~@/assets/images/Chalk-board-wallpaper-hd.jpg") no-repeat center center;
+  background: url("./assets/images/Chalk-board-wallpaper-hd.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .experience-section {
   @extend .font-setting;
-  background: url("~@/assets/images/bg2.jpg") no-repeat center center;
+  background: url("./assets/images/bg2.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .portfolio-section {
-  background: url("~@/assets/images/bg1.jpg") no-repeat center center;
+  background: url("./assets/images/bg1.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .future-section {
   @extend .font-setting;
-  background: url("~@/assets/images/pure.jpg") no-repeat center center;
+  background: url("./assets/images/pure.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .skill-section {
   @extend .font-setting;
-  background: url("~@/assets/images/Chalk-board-wallpaper-hd.jpg") no-repeat center center;
+  background: url("./assets/images/Chalk-board-wallpaper-hd.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
 .contact-section {
-  background: url("~@/assets/images/pure.jpg") no-repeat center center;
+  background: url("./assets/images/pure.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -110,7 +110,7 @@ a {
   color: #8f9da4;
   width: 21px;
   height: 21px;
-  background: url(~@/assets/images/dot.png) 5px 5px no-repeat;
+  background: url(./assets/images/dot.png) 5px 5px no-repeat;
 }
 
 /****************************右側導航欄End******************************/
