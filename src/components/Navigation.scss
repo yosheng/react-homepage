@@ -24,7 +24,16 @@
 .resume .navbar-brand:hover {
   color: #a7e615;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+.brand-logo {
+  height: 36px;
+  width: auto;
+}
+
 
 .resume .navbar-right li a,
 .resume .navbar-right li a:visited {

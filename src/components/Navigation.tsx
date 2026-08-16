@@ -51,7 +51,14 @@ const Navigation: React.FunctionComponent<INavigationProps> = ({activePage}) => 
         <Navbar collapseOnSelect expand="lg" variant="dark" className={`resume ${background}`}>
             <Container>
                 <Navbar.Brand href={`#${PageConstants.Home}`} data-menuanchor={PageConstants.Home}>
-                    Yosheng Zhang
+                    <img
+                        src="/logo192.png"
+                        srcSet="/logo192.png 1x, /logo512.png 2.67x"
+                        alt="Yosheng Zhang"
+                        height={36}
+                        className="brand-logo"
+                    />
+                    <span className="brand-text">Yosheng Zhang</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" id="responsive-toggle"/>
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
