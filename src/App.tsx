@@ -13,6 +13,7 @@ import PageSection from './components/PageSection';
 import {PageConstants} from "@/utils/constants";
 import Skill from "@/components/PageSection/Skill";
 import Contact from "@/components/PageSection/Contact";
+import MobileNotice from "@/components/MobileNotice";
 
 declare global {
     interface Window {
@@ -100,6 +101,7 @@ const App = () => {
     return (
         <div id="app">
             <Navigation activePage={activePage}/>
+            <MobileNotice />
             <ReactFullpage
                 {...options}
                 render={({state, fullpageApi}) => {

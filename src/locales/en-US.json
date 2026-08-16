@@ -87,5 +87,6 @@
   "contact.form.message": "Message",
   "contact.form.messagePlaceholder": "Please enter your message",
   "contact.form.submit": "Send",
-  "contact.wechat.info": "wechat: yosheng0323"
+  "contact.wechat.info": "wechat: yosheng0323",
+  "mobile.notice": "For the best experience, please visit on a desktop browser."
 }
