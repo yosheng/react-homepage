@@ -34,11 +34,6 @@ const Portfolio = () => {
             img: feideeParserImg,
         },
         {
-            title: 'AI Platform',
-            url: 'https://ai.yosheng.tw/',
-            img: aiPlatformImg,
-        },
-        {
             title: 'Tarot Note',
             url: 'https://tarot-note.readthedocs.io/zh-cn/latest/',
             img: tarotNoteImg,
