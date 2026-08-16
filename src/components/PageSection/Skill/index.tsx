@@ -89,24 +89,26 @@ const Skills: React.FC = () => {
     ];
 
     return (
-        <Container>
-            <Row>
-                <Col md={6}>
-                    <SkillSection title={t('skill.backend')} skills={backendSkills} />
-                </Col>
-                <Col md={6}>
-                    <SkillSection title={t('skill.frontend')} skills={frontendSkills} />
-                </Col>
-            </Row>
-            <Row>
-                <Col md={6}>
-                    <SkillSection title={t('skill.data_develop')} skills={dataSkills} />
-                </Col>
-                <Col md={6}>
-                    <SkillSection title={t('skill.ops')} skills={opsSkills} />
-                </Col>
-            </Row>
-        </Container>
+        <div className="skill-scroll-container">
+            <Container>
+                <Row>
+                    <Col md={6}>
+                        <SkillSection title={t('skill.backend')} skills={backendSkills} />
+                    </Col>
+                    <Col md={6}>
+                        <SkillSection title={t('skill.frontend')} skills={frontendSkills} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={6}>
+                        <SkillSection title={t('skill.data_develop')} skills={dataSkills} />
+                    </Col>
+                    <Col md={6}>
+                        <SkillSection title={t('skill.ops')} skills={opsSkills} />
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 };
 
