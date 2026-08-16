@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import './style.scss'
 
-import asusImg from '@/assets/images/experience/02-asus.jpg';
+import gssImg from '@/assets/images/experience/08-gss.jpg';
 import sceImg from '@/assets/images/experience/03-sce.jpg';
 import sweetomeImg from '@/assets/images/experience/04-sweetome.jpg';
 import futongImg from '@/assets/images/experience/05-futong.png';
@@ -15,12 +15,6 @@ const Experience = () => {
     const {t} = useTranslation();
 
     const experiences = [
-        {
-            imgSrc: asusImg,
-            name: t('experience.work.asus.name'),
-            role: t('experience.work.asus.role'),
-            description: t('experience.work.asus.description')
-        },
         {
             imgSrc: sceImg,
             name: t('experience.work.sce.name'),
@@ -50,7 +44,13 @@ const Experience = () => {
             name: t('experience.work.synyi.name'),
             role: t('experience.work.synyi.role'),
             description: t('experience.work.synyi.description')
-        }
+        },
+        {
+            imgSrc: gssImg,
+            name: t('experience.work.gss.name'),
+            role: t('experience.work.gss.role'),
+            description: t('experience.work.gss.description')
+        },
     ];
 
     return (
